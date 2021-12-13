@@ -1,5 +1,7 @@
 import * as THREE from 'https://threejs.org/build/three.module.js'
 
+var root = 'https://gre-v-el.github.io/Three.js-Full-Screen-Quad-Setup/';
+
 // three.js setups
 var canvasHTML = document.getElementById('canvas');
 var sceneThree = new THREE.Scene();
@@ -26,8 +28,8 @@ var rmUniforms = {
 
 var vertex = '';
 var fragment = '';
-loader.load('/shaders/fragment.glsl', function (data) { fragment = data; countLoads(); })
-loader.load('/shaders/vertex.glsl', function (data) { vertex = data; countLoads(); })
+loader.load(root+'/shaders/fragment.glsl', function (data) { fragment = data; countLoads(); })
+loader.load(root+'/shaders/vertex.glsl', function (data) { vertex = data; countLoads(); })
 
 var loadsLeft = 2;
 function countLoads() {
